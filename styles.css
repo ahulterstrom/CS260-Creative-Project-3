@@ -1,6 +1,7 @@
 body{
     margin: 0;
-    font-family: Roboto;
+    font-family: 'Roboto', sans-serif;
+
 }
 #mainarea{
     min-height: calc(100vh - 130px);
@@ -83,18 +84,20 @@ body{
     text-align: left;
     padding: 1vw;
     border-radius: 5px;
+    background-color: #EEEEEE;
 }
 .next{
     text-align: right;
     padding: 1vw;
     border-radius: 5px;
+    background-color: #EEEEEE;
 }
 .previous:hover{
-    background-color: #EFEFEF;
+    background-color: #DDDDDD;
     cursor: pointer;
 }
 .next:hover{
-    background-color: #EFEFEF;
+    background-color: #DDDDDD;
     cursor: pointer;
 }
 .pokemondisplay{
@@ -428,4 +431,7 @@ span#white{
 #stattext{
     display: inline;
     flex:1;
+}
+#stattext p{
+    margin: 5px auto;
 }

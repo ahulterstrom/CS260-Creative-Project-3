@@ -3,13 +3,14 @@
 
 <head>
     <link rel="stylesheet" href="styles.css" />
+    <link href="https://fonts.googleapis.com/css?family=Roboto&display=swap" rel="stylesheet">
     <title>Vue Pokedex</title>
 </head>
 
 <body>
     <div id="mainarea">
         <div id="app">
-            <h1>Search for a Pokemon:</h1>
+            <h1>Search for a Pokemon by name or number, or click random:</h1>
             <div class="userinput">
                 <input type="text" v-model="searchinput">
                 <button v-on:click="getPokemon">Search</button> <button v-on:click="getRandomPokemon">Random</button>
@@ -36,7 +37,7 @@
 
                     </div>
                     <div class="pokemondata">
-                        <div style="flex:1" class="content-holder image">
+                        <div style="flex:1; display:flex;" class="content-holder image">
                             <img :src="pokemon.image" class="pokemonimage">
                         </div>
                         <!--<p>{{pokemon.flavor_text_entries[1]}}</p>-->
@@ -80,7 +81,7 @@
 
                             <div class="stattextcontainer">
                                 <div id="stattext" v-for="stat in pokemon.stats">
-                                    <p>{{stat.stat}}</p>
+                                    <p><b>{{stat.stat}}</b></p>
                                     <p>{{stat.name}}</p>
                                 </div>
                             </div>
@@ -90,7 +91,7 @@
                         <div class="content-holder">
                             <h3>Abilities:</h3>
                             <div v-for="ability in pokemon.abilities">
-                                <p>{{ability.name}}<i> - {{ability.description}}</i></p>
+                                <p><b>{{ability.name}}</b> - {{ability.description}}</p>
                             </div>
                         </div>
 
